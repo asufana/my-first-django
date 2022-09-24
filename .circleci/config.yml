@@ -1,0 +1,15 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/python:3.9
+    steps:
+      - checkout
+      - run:
+          name: setup
+          command: |
+            pip install -r requirements.txt
+      - run:
+          name: tests
+          command: |
+            python3 manage.py test
