@@ -1,7 +1,7 @@
 import re
 from dataclasses import dataclass
 
-regex = r"^[a-zA-Z]{1,6}$"
+regex = r"^[0-9a-zA-Z]{1,6}$"
 
 
 @dataclass(eq=True, frozen=True)
